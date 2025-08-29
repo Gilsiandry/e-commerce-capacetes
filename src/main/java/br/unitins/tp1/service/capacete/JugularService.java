@@ -2,8 +2,8 @@ package br.unitins.tp1.service.capacete;
 
 import java.util.List;
 
-import br.unitins.tp1.dto.JugularDTO;
-import br.unitins.tp1.dto.JugularResponseDTO;
+import br.unitins.tp1.dto.capacete.JugularDTO;
+import br.unitins.tp1.dto.capacete.JugularResponseDTO;
 
 public interface JugularService {
     JugularResponseDTO create(JugularDTO jugular);

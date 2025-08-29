@@ -1,16 +1,16 @@
+
 package br.unitins.tp1.service.pedido;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-
-import br.unitins.tp1.dto.ItemPedidoDTO;
-import br.unitins.tp1.dto.PedidoDTO;
-import br.unitins.tp1.dto.PedidoResponseDTO;
-import br.unitins.tp1.model.Capacete;
-import br.unitins.tp1.model.ItemPedido;
-import br.unitins.tp1.model.Pedido;
-import br.unitins.tp1.model.Usuario;
+import br.unitins.tp1.dto.pedido.ItemPedidoDTO;
+import br.unitins.tp1.dto.pedido.PedidoDTO;
+import br.unitins.tp1.dto.pedido.PedidoResponseDTO;
+import br.unitins.tp1.model.capacete.Capacete;
+import br.unitins.tp1.model.pedido.ItemPedido;
+import br.unitins.tp1.model.pedido.Pedido;
+import br.unitins.tp1.model.usuario.Usuario;
 import br.unitins.tp1.repository.capacete.CapaceteRepository;
 import br.unitins.tp1.repository.PedidoRepository;
 import br.unitins.tp1.repository.usuario.UsuarioRepository;

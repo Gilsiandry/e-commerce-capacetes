@@ -1,6 +1,6 @@
 package br.unitins.tp1.resource;
 
-import br.unitins.tp1.dto.InformacaoDTO;
+import br.unitins.tp1.dto.capacete.InformacaoDTO;
 import br.unitins.tp1.service.capacete.InformacaoService;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;

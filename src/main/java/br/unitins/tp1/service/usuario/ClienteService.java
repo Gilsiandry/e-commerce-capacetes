@@ -1,4 +1,6 @@
+
 package br.unitins.tp1.service.usuario;
+
 
 import java.util.List;
 
@@ -7,8 +9,8 @@ import br.unitins.tp1.dto.endereco.EnderecoDTO;
 import br.unitins.tp1.dto.usuario.ClienteBasicoDTO;
 import br.unitins.tp1.dto.usuario.ClienteDTO;
 import br.unitins.tp1.dto.usuario.ClienteUpdateDTO;
-import br.unitins.tp1.dto.usuario.patches.CpfPatchDTO;
-import br.unitins.tp1.dto.usuario.patches.DataNascimentoPatchDTO;
+import br.unitins.tp1.dto.usuario.patches.CpfPatchRequestDTO;
+import br.unitins.tp1.dto.usuario.patches.DataNascimentoPatchRequestDTO;
 import br.unitins.tp1.dto.usuario.patches.EmailPatchDTO;
 import br.unitins.tp1.dto.usuario.patches.NomePatchDTO;
 import br.unitins.tp1.dto.usuario.patches.SenhaPatchDTO;
@@ -46,11 +48,11 @@ public interface ClienteService {
     void updateNome(String email, NomePatchDTO dto);
     void updateEmail(String email, EmailPatchDTO dto);
     void updateEnderecoEspecifico(String email, Long idEndereco, EnderecoDTO dto);
-    void updateEndereco(String email, List<EnderecoRequestDTO> dto);
+    void updateEndereco(String email, List<EnderecoDTO> dto);
     void updateTelefoneEspecifico(String email, Long idTelefone, TelefoneDTO dto);
     void updateTelefone(String email, List<TelefoneDTO> dto);
     Cliente updateNomeImagem(String email, String nomeImagem);
     Cliente gerarClienteFromFuncionario(String email);
-    void updateCpf(String email, CpfPatchDTO dto);
-    void updateDataNascimento(String email, DataNascimentoPatchDTO dto);
+    void updateCpf(String email, CpfPatchRequestDTO dto);
+    void updateDataNascimento(String email, DataNascimentoPatchRequestDTO dto);
 }

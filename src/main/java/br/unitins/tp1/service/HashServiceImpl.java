@@ -1,12 +1,11 @@
+
 package br.unitins.tp1.service;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.util.Base64;
-
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
-
 import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped

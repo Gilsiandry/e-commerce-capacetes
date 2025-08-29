@@ -1,6 +1,6 @@
 package br.unitins.tp1.resource;
 
-import br.unitins.tp1.dto.PessoaJuridicaDTO;
+import br.unitins.tp1.dto.usuario.PessoaJuridicaDTO;
 import br.unitins.tp1.service.usuario.PessoaJuridicaService;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;

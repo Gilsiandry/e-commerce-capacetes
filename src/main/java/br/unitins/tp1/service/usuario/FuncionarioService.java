@@ -1,4 +1,6 @@
+
 package br.unitins.tp1.service.usuario;
+
 
 import java.util.List;
 
@@ -6,8 +8,8 @@ import br.unitins.tp1.dto.TelefoneDTO;
 import br.unitins.tp1.dto.endereco.EnderecoDTO;
 import br.unitins.tp1.dto.usuario.FuncionarioDTO;
 import br.unitins.tp1.dto.usuario.FuncionarioUpdateDTO;
-import br.unitins.tp1.dto.usuario.patches.CpfPatchDTO;
-import br.unitins.tp1.dto.usuario.patches.DataNascimentoPatchDTO;
+import br.unitins.tp1.dto.usuario.patches.CpfPatchRequestDTO;
+import br.unitins.tp1.dto.usuario.patches.DataNascimentoPatchRequestDTO;
 import br.unitins.tp1.dto.usuario.patches.EmailPatchDTO;
 import br.unitins.tp1.dto.usuario.patches.NomePatchDTO;
 import br.unitins.tp1.dto.usuario.patches.SenhaPatchDTO;
@@ -47,9 +49,9 @@ public interface FuncionarioService {
 
     void updateEmail(String email, EmailPatchDTO dto);
 
-    void updateCpf(String email, CpfPatchDTO dto);
+    void updateCpf(String email, CpfPatchRequestDTO dto);
 
-    void updateDataNascimento(String email, DataNascimentoPatchDTO dto);
+    void updateDataNascimento(String email, DataNascimentoPatchRequestDTO dto);
 
     List<Funcionario> findByEmail(String email);
     

@@ -1,11 +1,9 @@
 package br.unitins.tp1.resource;
 
-import java.io.IOException;
 import java.util.List;
 
 import org.eclipse.microprofile.jwt.JsonWebToken;
 import org.jboss.logging.Logger;
-import org.jboss.resteasy.annotations.providers.multipart.MultipartForm;
 
 import br.unitins.tp1.dto.TelefoneDTO;
 import br.unitins.tp1.dto.endereco.EnderecoDTO;
@@ -14,13 +12,11 @@ import br.unitins.tp1.dto.usuario.ClienteBasicoResponseDTO;
 import br.unitins.tp1.dto.usuario.ClienteResponseDTO;
 import br.unitins.tp1.dto.usuario.ClienteUpdateDTO;
 import br.unitins.tp1.dto.usuario.ListaDesejoResponseDTO;
-import br.unitins.tp1.dto.usuario.patches.CpfPatchDTO;
-import br.unitins.tp1.dto.usuario.patches.CpfPatchDTO;
-import br.unitins.tp1.dto.usuario.patches.DataNascimentoPatchDTO;
+import br.unitins.tp1.dto.usuario.patches.CpfPatchRequestDTO;
+import br.unitins.tp1.dto.usuario.patches.DataNascimentoPatchRequestDTO;
 import br.unitins.tp1.dto.usuario.patches.EmailPatchDTO;
 import br.unitins.tp1.dto.usuario.patches.NomePatchDTO;
 import br.unitins.tp1.dto.usuario.patches.SenhaPatchDTO;
-import br.unitins.tp1.form.ImageForm;
 import br.unitins.tp1.service.file.ClienteFileServiceImpl;
 import br.unitins.tp1.service.usuario.ClienteService;
 import br.unitins.tp1.service.usuario.UsuarioService;
@@ -112,7 +108,7 @@ public class ClienteBasicoResource {
     @PATCH
     @RolesAllowed({"User"})
     @Path("/update/cpf")
-    public Response updateCpf(@Valid CpfPatchDTO dto) {
+    public Response updateCpf(@Valid CpfPatchRequestDTO dto) {
         LOG.info("Execucao do metodo updateCpf");
         String email = jsonWebToken.getSubject();
 
@@ -123,7 +119,7 @@ public class ClienteBasicoResource {
     @PATCH
     @RolesAllowed({"User"})
     @Path("/update/datanascimento")
-    public Response updateDataNascimento(@Valid DataNascimentoPatchDTO dto) {
+    public Response updateDataNascimento(@Valid DataNascimentoPatchRequestDTO dto) {
         LOG.info("Execucao do metodo updateDataNascimento");
         String email = jsonWebToken.getSubject();
 
@@ -214,22 +210,22 @@ public class ClienteBasicoResource {
         return Response.noContent().build();
     }
 
-    @PATCH
-    @RolesAllowed({"User"})
-    @Path("/imagem/upload")
-    @Consumes(MediaType.MULTIPART_FORM_DATA)
-    public Response uploadImage(@MultipartForm ImageForm form) {
-        LOG.info("Execucao do metodo uploadImage.");
-        String email = jsonWebToken.getSubject();
-        try {
-            String nomeImagem = clienteFileService.save(form.getNomeImagem(), form.getImagem());
+    // @PATCH
+    // @RolesAllowed({"User"})
+    // @Path("/imagem/upload")
+    // @Consumes(MediaType.MULTIPART_FORM_DATA)
+    // public Response uploadImage(@MultipartForm ImageForm form) {
+    //     LOG.info("Execucao do metodo uploadImage.");
+    //     String email = jsonWebToken.getSubject();
+    //     try {
+    //         String nomeImagem = clienteFileService.save(form.getNomeImagem(), form.getImagem());
 
-            clienteService.updateNomeImagem(email, nomeImagem);
-        } catch (IOException e) {
-            Response.status(500).build();
-        }
-        return Response.noContent().build();
-    }
+    //         clienteService.updateNomeImagem(email, nomeImagem);
+    //     } catch (IOException e) {
+    //         Response.status(500).build();
+    //     }
+    //     return Response.noContent().build();
+    // }
 
     @GET
     @RolesAllowed({"User"})

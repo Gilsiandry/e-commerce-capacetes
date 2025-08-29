@@ -2,10 +2,10 @@ package br.unitins.tp1.service.capacete;
 
 import java.util.List;
 
-import br.unitins.tp1.dto.InformacaoDTO;
-import br.unitins.tp1.dto.InformacaoResponseDTO;
-import br.unitins.tp1.model.Informacao;
-import br.unitins.tp1.repository.InformacaoRepository;
+import br.unitins.tp1.dto.capacete.InformacaoDTO;
+import br.unitins.tp1.dto.capacete.InformacaoResponseDTO;
+import br.unitins.tp1.model.capacete.Informacao;
+import br.unitins.tp1.repository.capacete.InformacaoRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;

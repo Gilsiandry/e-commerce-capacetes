@@ -2,9 +2,9 @@ package br.unitins.tp1.service.capacete;
 
 import java.util.List;
 
-import br.unitins.tp1.dto.CapaceteDTO;
-import br.unitins.tp1.dto.CapaceteResponseDTO;
-import br.unitins.tp1.model.Capacete;
+import br.unitins.tp1.dto.capacete.CapaceteDTO;
+import br.unitins.tp1.dto.capacete.CapaceteResponseDTO;
+import br.unitins.tp1.model.capacete.Capacete;
 import br.unitins.tp1.repository.capacete.CapaceteRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;

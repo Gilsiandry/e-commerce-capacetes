@@ -1,6 +1,8 @@
 package br.unitins.tp1.resource;
 
-import br.unitins.tp1.dto.LoteDTO;
+import java.time.LocalDate;
+
+import br.unitins.tp1.dto.capacete.LoteDTO;
 import br.unitins.tp1.service.capacete.LoteService;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
@@ -15,8 +17,6 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Response.Status;
-
-import java.time.LocalDate;
 
 
 

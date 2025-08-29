@@ -4,7 +4,7 @@ import java.util.List;
 
 import br.unitins.tp1.dto.capacete.AcessorioDTO;
 import br.unitins.tp1.dto.capacete.AcessorioResponseDTO;
-import br.unitins.tp1.model.Acessorio;
+import br.unitins.tp1.model.capacete.Acessorio;
 import br.unitins.tp1.repository.capacete.AcessorioRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;

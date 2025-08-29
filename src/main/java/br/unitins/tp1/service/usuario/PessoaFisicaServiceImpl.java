@@ -1,10 +1,10 @@
+
 package br.unitins.tp1.service.usuario;
 
 import java.util.List;
-
-import br.unitins.tp1.dto.PessoaFisicaDTO;
-import br.unitins.tp1.dto.PessoaFisicaResponseDTO;
-import br.unitins.tp1.model.PessoaFisica;
+import br.unitins.tp1.dto.usuario.PessoaFisicaDTO;
+import br.unitins.tp1.dto.usuario.PessoaFisicaResponseDTO;
+import br.unitins.tp1.model.usuario.PessoaFisica;
 import br.unitins.tp1.repository.usuario.PessoaFisicaRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;

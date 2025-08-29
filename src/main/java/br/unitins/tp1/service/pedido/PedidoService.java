@@ -1,9 +1,9 @@
+
 package br.unitins.tp1.service.pedido;
 
 import java.util.List;
-
-import br.unitins.tp1.dto.PedidoDTO;
-import br.unitins.tp1.dto.PedidoResponseDTO;
+import br.unitins.tp1.dto.pedido.PedidoDTO;
+import br.unitins.tp1.dto.pedido.PedidoResponseDTO;
 
 public interface PedidoService {
 

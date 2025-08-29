@@ -1,10 +1,10 @@
 package br.unitins.tp1.service.capacete;
 
+import java.time.LocalDate;
 import java.util.List;
 
-import br.unitins.tp1.dto.LoteDTO;
-import br.unitins.tp1.dto.LoteResponseDTO;
-import java.time.LocalDate;
+import br.unitins.tp1.dto.capacete.LoteDTO;
+import br.unitins.tp1.dto.capacete.LoteResponseDTO;
 
 public interface LoteService {
     LoteResponseDTO create(LoteDTO lote);

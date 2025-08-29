@@ -8,13 +8,13 @@ import jakarta.persistence.Converter;
 public class ModalidadeCartaoConverter implements AttributeConverter<ModalidadeCartao, Integer> {
 
     @Override
-    public Integer convertToDatabaseColumn(ModalidadeCartao modalidadecartao) {
-        return modalidadecartao == null ? null : modalidadecartao.getId();
+    public Integer convertToDatabaseColumn(ModalidadeCartao modalidadeCartao) {
+        return modalidadeCartao == null ? null : modalidadeCartao.getId().intValue();
     }
 
     @Override
     public ModalidadeCartao convertToEntityAttribute(Integer idModalidadeCartao) {
-        return ModalidadeCartao.valueOf(idModalidadeCartao);
+        return ModalidadeCartao.fromId(idModalidadeCartao);
     }
     
 }

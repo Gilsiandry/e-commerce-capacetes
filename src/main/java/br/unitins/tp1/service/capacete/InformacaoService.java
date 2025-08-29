@@ -2,8 +2,8 @@ package br.unitins.tp1.service.capacete;
 
 import java.util.List;
 
-import br.unitins.tp1.dto.InformacaoDTO;
-import br.unitins.tp1.dto.InformacaoResponseDTO;
+import br.unitins.tp1.dto.capacete.InformacaoDTO;
+import br.unitins.tp1.dto.capacete.InformacaoResponseDTO;
 
 public interface InformacaoService {
     InformacaoResponseDTO create(InformacaoDTO informacao);

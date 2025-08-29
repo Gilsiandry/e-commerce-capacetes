@@ -1,6 +1,7 @@
+
 package br.unitins.tp1.service.usuario;
 
-import br.unitins.tp1.dto.UsuarioResponseDTO;
+import br.unitins.tp1.dto.usuario.UsuarioResponseDTO;
 import br.unitins.tp1.repository.usuario.UsuarioRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;

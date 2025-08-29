@@ -6,61 +6,49 @@ import jakarta.persistence.Entity;
 
 @Entity
 public class ModalidadeCartao extends DefaultEntity {
+  private String titular;
+  private String cpfCartao;
+  private String numero;
+  private LocalDate dataValidade;
+  private String cvc;
 
-    private String titular;
-    private String cpfCartao;
-    private String numero;
-    private LocalDate dataValidade;
-    private String cvc;
+  public String getTitular() {
+      return titular;
+  }
 
-    private ModalidadeCartao modalidadeCartao;
+  public void setTitular(String titular) {
+      this.titular = titular;
+  }
 
-    public String getTitular() {
-        return titular;
-    }
+  public String getCpfCartao() {
+      return cpfCartao;
+  }
 
-    public void setTitular(String titular) {
-        this.titular = titular;
-    }
+  public void setCpfCartao(String cpfCartao) {
+      this.cpfCartao = cpfCartao;
+  }
 
-    public String getCpfCartao() {
-        return cpfCartao;
-    }
+  public String getNumero() {
+      return numero;
+  }
 
-    public void setCpfCartao(String cpfCartao) {
-        this.cpfCartao = cpfCartao;
-    }
+  public void setNumero(String numero) {
+      this.numero = numero;
+  }
 
-    public String getNumero() {
-        return numero;
-    }
+  public LocalDate getDataValidade() {
+      return dataValidade;
+  }
 
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
+  public void setDataValidade(LocalDate dataValidade) {
+      this.dataValidade = dataValidade;
+  }
 
-    public LocalDate getDataValidade() {
-        return dataValidade;
-    }
+  public String getCvc() {
+      return cvc;
+  }
 
-    public void setDataValidade(LocalDate dataValidade) {
-        this.dataValidade = dataValidade;
-    }
-
-    public String getCvc() {
-        return cvc;
-    }
-
-    public void setCvc(String cvc) {
-        this.cvc = cvc;
-    }
-
-    public ModalidadeCartao getModalidadeCartao() {
-        return modalidadeCartao;
-    }
-
-    public void setModalidadeCartao(ModalidadeCartao modalidadeCartao) {
-        this.modalidadeCartao = modalidadeCartao;
-    }
-
+  public void setCvc(String cvc) {
+      this.cvc = cvc;
+  }
 }
