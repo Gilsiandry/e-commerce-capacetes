@@ -1,0 +1,137 @@
+@startuml
+
+class Capacete {
+    nome: String
+    marca: String
+    categoria: String
+    modelo: String
+    cor: String
+    tamanho: int
+    preco: Double
+}
+
+class Jugular {
+    tipoFechamento: String
+    
+}
+
+class Informacao {
+    descricao: String
+    anoLancamento: Integer
+}
+
+class Acessorio {
+    nome: String
+    cor: String
+}
+
+class Certificacao {
+    nome: String
+    pais: String
+    descricao: String
+}
+
+class Lote {
+    Codigo: String
+    dataFabricacao: LocalDate
+}
+
+
+
+class Usuario {
+    email: String
+    senha: String
+    perfil: Perfil
+}
+
+enum Perfil {
+    administrador: int
+    cliente: int
+}
+
+class Administrador {
+    matricula: int
+}
+
+abstract Pessoa {
+    nome: String
+}
+
+class PessoaFisica{
+    cpf: String
+}
+
+class PessoaJuridica{
+    cnpj: String
+}
+
+
+class Cliente {
+    cpf_cnpj: String
+    telefone: String
+}
+
+
+class EnderecoEntrega {
+    logradouro: String
+    numero: int
+    bairro: String
+    cidade: String
+    estado: String
+    cep: String
+}
+
+
+class Pedido {
+    data: LocalDateTime
+    valorTotal: Double
+}
+
+class StatusPedido {
+    dataConsulta: LocalDateTime
+    situacaoPedido: SituacaoPedido
+}
+
+enum SituacaoPedido {
+    aguardandoPagamento: int
+    pagamentoConfirmado: int
+    cancelado: int
+    enviado: int
+    entregue: int
+    devolvido: int
+}
+
+class ItemPedido {
+    quantidade: int
+    preco: Double
+}
+
+
+'relacionamento
+
+Capacete "*" --> "*"Certificacao
+Capacete "*" --> "*" Acessorio
+Capacete "*" --> "*" Informacao
+Capacete "*" --> "1" Lote
+Capacete "1" --> "1" Jugular
+
+
+Usuario "1" --> "*" Perfil
+Usuario "1" --> "1" Pessoa
+Usuario "1" --> "1" Cliente
+Usuario "1" --> "1" Administrador
+Cliente "1" --> "*" EnderecoEntrega
+
+
+Pedido "*" --> "1" Cliente
+Pedido "1" --> "*" StatusPedido
+Pedido "1" --> "*" ItemPedido
+Pedido "*" --> "1" EnderecoEntrega
+StatusPedido "*" --> "1" SituacaoPedido
+ItemPedido "*" --> "1" Capacete
+
+
+PessoaFisica --|> Pessoa
+PessoaJuridica --|> Pessoa
+
+@enduml
